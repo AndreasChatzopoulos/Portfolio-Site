@@ -9,7 +9,7 @@ export default function Portfolio() {
         <div className="flex justify-center flex-wrap gap-4">
           <a href="https://github.com/AndreasChatzopoulos" target="_blank" className="px-5 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition shadow">GitHub</a>
           <a href="mailto:achatzopoulos@outlook.com" className="px-5 py-2 border border-gray-700 rounded-full hover:bg-gray-100 transition shadow">Contact</a>
-          <a href="/Andreas_ChatzopoulosCV.pdf" download className="px-5 py-2 border border-gray-700 rounded-full hover:bg-gray-100 transition shadow">Download Resume</a>
+          <a href="/Andreas_Chatzopoulos_CV.pdf" download className="px-5 py-2 border border-gray-700 rounded-full hover:bg-gray-100 transition shadow">Download Resume</a>
         </div>
       </section>
 

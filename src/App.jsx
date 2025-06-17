@@ -1,6 +1,4 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 
 export default function Portfolio() {
   return (
@@ -9,15 +7,9 @@ export default function Portfolio() {
       <section className="text-center space-y-2">
         <h1 className="text-4xl font-bold">Andreas Chatzopoulos</h1>
         <div className="space-x-4">
-          <a href="https://github.com/AndreasChatzopoulos" target="_blank">
-            <Button>GitHub</Button>
-          </a>
-          <a href="mailto:achatzopoulos@outlook.com">
-            <Button variant="outline">Contact</Button>
-          </a>
-          <a href="/resume.pdf" download>
-            <Button variant="outline">Download Resume</Button>
-          </a>
+          <a href="https://github.com/AndreasChatzopoulos" target="_blank" className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition">GitHub</a>
+          <a href="mailto:achatzopoulos@outlook.com" className="px-4 py-2 border rounded hover:bg-gray-100 transition">Contact</a>
+          <a href="/resume.pdf" download className="px-4 py-2 border rounded hover:bg-gray-100 transition">Download Resume</a>
         </div>
       </section>
 
@@ -46,45 +38,29 @@ export default function Portfolio() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-semibold">Spam Detector</h3>
-              <p className="text-sm mb-2">A machine learning project using TF-IDF and logistic regression to classify spam emails with high accuracy.</p>
-              <a href="https://github.com/AndreasChatzopoulos/spam-detector-ml" target="_blank">
-                <Button variant="outline">View on GitHub</Button>
-              </a>
-            </CardContent>
-          </Card>
+          <div className="p-4 border rounded-xl shadow-sm hover:shadow-md transition bg-white">
+            <h3 className="text-xl font-semibold">Spam Detector</h3>
+            <p className="text-sm mb-2">A machine learning project using TF-IDF and logistic regression to classify spam emails with high accuracy.</p>
+            <a href="https://github.com/AndreasChatzopoulos/spam-detector-ml" target="_blank" className="text-blue-600 underline">View on GitHub</a>
+          </div>
 
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-semibold">Face Landmark Detector</h3>
-              <p className="text-sm mb-2">Computer vision project that detects facial landmarks using HOG features and ridge regression.</p>
-              <a href="https://github.com/AndreasChatzopoulos/face-landmark-detector" target="_blank">
-                <Button variant="outline">View on GitHub</Button>
-              </a>
-            </CardContent>
-          </Card>
+          <div className="p-4 border rounded-xl shadow-sm hover:shadow-md transition bg-white">
+            <h3 className="text-xl font-semibold">Face Landmark Detector</h3>
+            <p className="text-sm mb-2">Computer vision project that detects facial landmarks using HOG features and ridge regression.</p>
+            <a href="https://github.com/AndreasChatzopoulos/face-landmark-detector" target="_blank" className="text-blue-600 underline">View on GitHub</a>
+          </div>
 
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-semibold">CPU Scheduler Simulator</h3>
-              <p className="text-sm mb-2">A Java project simulating various CPU scheduling algorithms including MLFQ and SJF.</p>
-              <a href="https://github.com/AndreasChatzopoulos/cpu-scheduler-simulator" target="_blank">
-                <Button variant="outline">View on GitHub</Button>
-              </a>
-            </CardContent>
-          </Card>
+          <div className="p-4 border rounded-xl shadow-sm hover:shadow-md transition bg-white">
+            <h3 className="text-xl font-semibold">CPU Scheduler Simulator</h3>
+            <p className="text-sm mb-2">A Java project simulating various CPU scheduling algorithms including MLFQ and SJF.</p>
+            <a href="https://github.com/AndreasChatzopoulos/cpu-scheduler-simulator" target="_blank" className="text-blue-600 underline">View on GitHub</a>
+          </div>
 
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-semibold">TFTP Client-Server</h3>
-              <p className="text-sm mb-2">A Java networking project that implements a TFTP client and server using both TCP and UDP sockets.</p>
-              <a href="https://github.com/AndreasChatzopoulos/tftp-client-server-simulator" target="_blank">
-                <Button variant="outline">View on GitHub</Button>
-              </a>
-            </CardContent>
-          </Card>
+          <div className="p-4 border rounded-xl shadow-sm hover:shadow-md transition bg-white">
+            <h3 className="text-xl font-semibold">TFTP Client-Server</h3>
+            <p className="text-sm mb-2">A Java networking project that implements a TFTP client and server using both TCP and UDP sockets.</p>
+            <a href="https://github.com/AndreasChatzopoulos/tftp-client-server-simulator" target="_blank" className="text-blue-600 underline">View on GitHub</a>
+          </div>
         </div>
       </section>
 

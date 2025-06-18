@@ -5,13 +5,13 @@ const projects = [
     title: "Spam Detector",
     desc: "Classifies spam emails using TF-IDF and logistic regression.",
     url: "https://github.com/AndreasChatzopoulos/spam-detector-ml",
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+    img: "https://cdn.pixabay.com/photo/2023/04/16/18/15/spam-9283904_1280.png"
   },
   {
     title: "Face Landmark Detector",
     desc: "Detects facial landmarks with HOG features and ridge regression.",
     url: "https://github.com/AndreasChatzopoulos/face-landmark-detector",
-    img: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=600&q=80"
+    img: "https://github.com/google/mediapipe/raw/master/docs/images/face_landmarks.png"
   },
   {
     title: "CPU Scheduler Simulator",
@@ -23,9 +23,10 @@ const projects = [
     title: "TFTP Client-Server",
     desc: "Implements a TFTP protocol over TCP/UDP in Java.",
     url: "https://github.com/AndreasChatzopoulos/tftp-client-server-simulator",
-    img: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+    img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
   }
 ];
+
 
 export default function Portfolio() {
   const [currentProject, setCurrentProject] = useState(0);

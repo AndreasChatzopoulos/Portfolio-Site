@@ -7,7 +7,6 @@ const projects = [
     desc: "Classifies spam emails using TF-IDF and logistic regression.",
     url: "https://github.com/AndreasChatzopoulos/spam-detector-ml",
     img: "https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?auto=format&fit=crop&w=600&q=80"
-    // this envelope-with-spam icon is a stable Unsplash asset :contentReference[oaicite:0]{index=0}
   },
   {
     title: "Face Landmark Detector",
@@ -40,20 +39,32 @@ export default function Portfolio() {
       <div className="w-full max-w-4xl bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl p-8 mb-8">
         {/* Hero */}
         <section className="text-center mb-7">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-2" style={{ fontFamily: 'Nunito, sans-serif' }}>
+          <h1
+            className="text-4xl font-extrabold text-gray-900 mb-2"
+            style={{ fontFamily: 'Nunito, sans-serif' }}
+          >
             Andreas Chatzopoulos
           </h1>
           <div className="flex flex-wrap justify-center gap-3 mb-2">
-            <a href="https://github.com/AndreasChatzopoulos" target="_blank" rel="noopener noreferrer"
-               className="px-5 py-2 rounded-full bg-blue-700 text-white font-bold shadow hover:bg-blue-800 transition">
+            <a
+              href="https://github.com/AndreasChatzopoulos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 rounded-full bg-blue-700 text-white font-bold shadow hover:bg-blue-800 transition"
+            >
               GitHub
             </a>
-            <a href="mailto:achatzopoulos@outlook.com"
-               className="px-5 py-2 rounded-full border-2 border-blue-700 text-blue-700 font-bold shadow hover:bg-blue-700 hover:text-white transition">
+            <a
+              href="mailto:achatzopoulos@outlook.com"
+              className="px-5 py-2 rounded-full border-2 border-blue-700 text-blue-700 font-bold shadow hover:bg-blue-700 hover:text-white transition"
+            >
               Contact
             </a>
-            <a href="/Andreas_Chatzopoulos_CV.pdf" download
-               className="px-5 py-2 rounded-full border-2 border-blue-700 text-blue-700 font-bold shadow hover:bg-blue-700 hover:text-white transition">
+            <a
+              href="/Andreas_Chatzopoulos_CV.pdf"
+              download
+              className="px-5 py-2 rounded-full border-2 border-blue-700 text-blue-700 font-bold shadow hover:bg-blue-700 hover:text-white transition"
+            >
               Download Resume
             </a>
           </div>
@@ -63,8 +74,7 @@ export default function Portfolio() {
         <section className="mb-7">
           <h2 className="text-2xl font-bold text-blue-900 border-b mb-2">About Me</h2>
           <p className="text-base text-gray-700 leading-relaxed">
-            I'm a final-year Computer Science student at the University of Sussex passionate about solving real-world problems with code. I have built spam detectors, facial landmark models, CPU schedulers, and client-server protocols from scratch.
-            I enjoy building scalable systems and tackling complex technical challenges. I’m actively seeking opportunities in data engineering, machine learning, and backend development.
+            I'm a final-year Computer Science student at the University of Sussex passionate about solving real-world problems with code. I have built spam detectors, facial landmark models, CPU schedulers, and client-server protocols from scratch. I enjoy building scalable systems and tackling complex technical challenges. I’m actively seeking opportunities in data engineering, machine learning, and backend development.
           </p>
         </section>
 
@@ -72,30 +82,50 @@ export default function Portfolio() {
         <section className="mb-7">
           <h2 className="text-2xl font-bold text-blue-900 border-b mb-2">Projects</h2>
           <div className="relative bg-blue-50 rounded-xl shadow-inner flex flex-col items-center p-4 transition-all">
+            {/* Project Title */}
+            <h3 className="text-xl font-bold text-black mb-2">
+              {projects[currentProject].title}
+            </h3>
+            {/* Project Image */}
             <img
               src={projects[currentProject].img}
               alt={projects[currentProject].title}
               className="rounded-lg shadow-lg mb-3 object-cover w-full h-64"
-              onError={e => e.currentTarget.src = '/img/placeholder.png'}
+              onError={e => (e.currentTarget.src = '/img/placeholder.png')}
             />
-            <h3 className="text-lg font-semibold mb-1">{projects[currentProject].title}</h3>
+            {/* Description & Link */}
             <p className="text-sm text-gray-700 mb-2">{projects[currentProject].desc}</p>
-            <a href={projects[currentProject].url} target="_blank" rel="noopener noreferrer"
-               className="inline-block mb-2 px-4 py-1 border-2 border-blue-700 text-blue-700 rounded-full font-semibold hover:bg-blue-700 hover:text-white transition">
+            <a
+              href={projects[currentProject].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mb-2 px-4 py-1 border-2 border-blue-700 text-blue-700 rounded-full font-semibold hover:bg-blue-700 hover:text-white transition"
+            >
               View on GitHub
             </a>
+            {/* Controls */}
             <div className="flex gap-6 items-center mt-2">
-              <button onClick={prevProject}
-                      className="rounded-full bg-white shadow px-3 py-1 hover:bg-blue-100 text-blue-700 font-bold">‹
+              <button
+                onClick={prevProject}
+                className="rounded-full bg-white shadow px-3 py-1 hover:bg-blue-100 text-blue-700 font-bold"
+              >
+                ‹
               </button>
               <div className="flex gap-1">
                 {projects.map((_, i) => (
-                  <span key={i}
-                        className={`w-2 h-2 rounded-full ${i === currentProject ? 'bg-blue-700' : 'bg-blue-200'} transition`}/>
+                  <span
+                    key={i}
+                    className={`w-2 h-2 rounded-full ${
+                      i === currentProject ? 'bg-blue-700' : 'bg-blue-200'
+                    } transition`}
+                  />
                 ))}
               </div>
-              <button onClick={nextProject}
-                      className="rounded-full bg-white shadow px-3 py-1 hover:bg-blue-100 text-blue-700 font-bold">›
+              <button
+                onClick={nextProject}
+                className="rounded-full bg-white shadow px-3 py-1 hover:bg-blue-100 text-blue-700 font-bold"
+              >
+                ›
               </button>
             </div>
           </div>
@@ -117,7 +147,12 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="text-center mt-2 text-xs text-gray-600">
-        <p>Want to work together? <a className="text-blue-700" href="mailto:achatzopoulos@outlook.com">achatzopoulos@outlook.com</a></p>
+        <p>
+          Want to work together?{' '}
+          <a className="text-blue-700" href="mailto:achatzopoulos@outlook.com">
+            achatzopoulos@outlook.com
+          </a>
+        </p>
         <p className="mt-1">© {new Date().getFullYear()} Andreas Chatzopoulos</p>
       </footer>
     </main>

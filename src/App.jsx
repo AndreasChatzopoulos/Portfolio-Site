@@ -64,7 +64,6 @@ export default function Portfolio() {
           <h2 className="text-2xl font-bold text-blue-900 border-b mb-2">About Me</h2>
           <p className="text-base text-gray-700 leading-relaxed">
             I'm a final-year Computer Science student at the University of Sussex passionate about solving real-world problems with code. I have built spam detectors, facial landmark models, CPU schedulers, and client-server protocols from scratch.
-            <br /><br />
             I enjoy building scalable systems and tackling complex technical challenges. I’m actively seeking opportunities in data engineering, machine learning, and backend development.
           </p>
         </section>
